@@ -43,10 +43,10 @@ class Cuve():
         self._valve = Valve()
         
         # Création des boutons tkinter
-        self._button_L = Button(master, text="L", command=self.cap00)
-        self._button_1 = Button(master, text="1", command=self.cap01)
-        self._button_2 = Button(master, text="2", command=self.cap02)
-        self._button_H = Button(master, text="H", command=self.cap03)
+        self._button_L = Button(master, text="L", pull_up=True, command=self.cap00)
+        self._button_1 = Button(master, text="1", pull_up=True, command=self.cap01)
+        self._button_2 = Button(master, text="2", pull_up=True, command=self.cap02)
+        self._button_H = Button(master, text="H", pull_up=True, command=self.cap03)
 
         # Placement des boutons tkinter
         self._button_L.grid(row=0, column=0)
