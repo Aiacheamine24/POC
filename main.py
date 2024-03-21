@@ -12,6 +12,8 @@ class MainApp(tk.Tk):
         self.geometry("400x200")
 
         self.seg7 = Seg7()
+        self.seg7.showNumber(0)
+
 
         # Set 2 Columns
         self.columnconfigure(0, weight=1)
@@ -133,31 +135,23 @@ class MainApp(tk.Tk):
             self.z01Status = not self.z01Status
             self.z01.config(bg="green" if self.z01Status else "red")
             self.seg7.showNumber(1)
-        else:
-            self.seg7.showNumber("E")
     def pressZone02(self):
         if self.statusOfSystem == "on":
             self.z02Status = not self.z02Status
             self.z02.config(bg="green" if self.z02Status else "red")
             self.seg7.showNumber(2)
-        else:
-            self.seg7.showNumber("E")
 
     def pressZone03(self):
         if self.statusOfSystem == "on":
             self.z03Status = not self.z03Status
             self.z03.config(bg="green" if self.z03Status else "red")
             self.seg7.showNumber(3)
-        else:
-            self.seg7.showNumber("E")
 
     def pressZone04(self):
         if self.statusOfSystem == "on":
             self.z04Status = not self.z04Status
             self.z04.config(bg="green" if self.z04Status else "red")
             self.seg7.showNumber(4)
-        else:
-            self.seg7.showNumber("E")
     
 class Seg7():
     def showNumber(self, numberToShow):
@@ -172,6 +166,7 @@ class Seg7():
     def __init__(self):
         self._numbers = {
             # L F E D
+            0: [1, 1, 1, 1, 1, 1, 0, 0],
             1: [0, 1, 1, 0, 0, 0, 0, 0],
             2: [1, 1, 0, 1, 1, 0, 1, 0],
             3: [1, 1, 1, 1, 0, 0, 1, 0],
