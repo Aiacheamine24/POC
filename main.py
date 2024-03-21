@@ -135,7 +135,7 @@ class MainApp(tk.Tk):
 
     def pressZone01(self, button):
         # Set the status of the zone to "on"
-        if self.statusOfSystem == "on"
+        if self.statusOfSystem == "on":
             self.z01Status = not self.z01Status
             self.z01.config(bg="green" if self.z01Status else "red")
             self.seg7.showNumber(1)
