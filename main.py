@@ -161,6 +161,8 @@ class Seg7():
     def showNumber(self, numberToShow):
         if numberToShow in self._numbers.keys():
             self._numberToShow = self._numbers[numberToShow]
+            print(self._numberToShow)
+            print(numberToShow)
         else:
             self._numberToShow = self._numbers["E"]
             
