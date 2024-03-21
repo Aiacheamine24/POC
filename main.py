@@ -27,19 +27,23 @@ class MainApp(tk.Tk):
 
         # Inside First Column set 4 Buttons in each Sub-Column
         self.z01Status = False
-        self.z01 = Button(self, text="Zone 01", command=self.pressZone01)
+        self.z01 = Button(self, text="Zone 01")
+        self.z01.config(command=lambda button = self.z01: self.pressZone01(button))
         self.z01.grid(row=0, column=0, sticky="nsew")
 
         self.z02Status = False
-        self.z02 = Button(self, text="Zone 02", command=self.pressZone02)
+        self.z02 = Button(self, text="Zone 02")
+        self.z02.config(command=lambda button = self.z02: self.pressZone02(button))
         self.z02.grid(row=1, column=0, sticky="nsew")
 
         self.z03Status = False
-        self.z03 = Button(self, text="Zone 03", command=self.pressZone03)
+        self.z03 = Button(self, text="Zone 03")
+        self.z03.config(command=lambda button = self.z03: self.pressZone03(button))
         self.z03.grid(row=0, column=1, sticky="nsew")
 
         self.z04Status = False
-        self.z04 = Button(self, text="Zone 04", command=self.pressZone04)
+        self.z04 = Button(self, text="Zone 04")
+        self.z04.config(command=lambda button = self.z04: self.pressZone04(button))
         self.z04.grid(row=1, column=1, sticky="nsew")
 
         # Add here 2 labels and 2 entries
