@@ -133,25 +133,25 @@ class MainApp(tk.Tk):
         self.z03Status = False
         self.z04Status = False
 
-    def pressZone01(self):
+    def pressZone01(self, button):
         # Set the status of the zone to "on"
-        if self.statusOfSystem == "on":
+        if self.statusOfSystem == "on"
             self.z01Status = not self.z01Status
             self.z01.config(bg="green" if self.z01Status else "red")
             self.seg7.showNumber(1)
-    def pressZone02(self):
+    def pressZone02(self, button):
         if self.statusOfSystem == "on":
             self.z02Status = not self.z02Status
             self.z02.config(bg="green" if self.z02Status else "red")
             self.seg7.showNumber(2)
 
-    def pressZone03(self):
+    def pressZone03(self, button):
         if self.statusOfSystem == "on":
             self.z03Status = not self.z03Status
             self.z03.config(bg="green" if self.z03Status else "red")
             self.seg7.showNumber(3)
 
-    def pressZone04(self):
+    def pressZone04(self, button):
         if self.statusOfSystem == "on":
             self.z04Status = not self.z04Status
             self.z04.config(bg="green" if self.z04Status else "red")
