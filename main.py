@@ -159,7 +159,6 @@ class MainApp(tk.Tk):
         else:
             self.seg7.showNumber("E")
     
-
 class Seg7():
     def showNumber(self, numberToShow):
         if numberToShow in self._numbers.keys():
@@ -181,6 +180,7 @@ class Seg7():
         }
         
         self._pins = [LED(14), LED(15), LED(18), LED(2), LED(3), LED(17), LED(27), LED(22)]
+
 
 if __name__ == "__main__":
     app = MainApp()
